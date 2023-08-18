@@ -21,9 +21,17 @@ destroy <class> <id> Deletes an instance based on the class name and id and save
 show <class> <id> Prints the string representation of a class instance based on the class name and ID
 
 ### File Descriptions
+- **console.py:** hbnb console
 - *models* directory:
+  - *engine* directory:
+    - **file_storage.py**: serializes instances to a JSON file and deserializes JSON file to instances
+  - **amenity.py:** Class *Amenity*. Attributes: *name*.
   - **base_model.py:** Class *BaseModel* which all other classes inherit from. Attributes: *id, created_at, updated_at*.
   - **city.py:** Class *City*. Attributes: *state_id, name*.
+  - **place.py:** Class *Place*. Attributes: *city_id, user_id, name, description, number_rooms, number_bathrooms, max_gest, price_by_night, latitude, longitude, amenity_ids*.
+  - **review.py:** Class *Review*. Attributes: *place_id, user_id, text*.
+  -  **state.py:** Class *State*. Attributes: *name*.
+  - **user.py:** Class *User*. Attributes: *email, password, first_name, last_name*.
 
 ## Unit Testing
 Unit test are stored in the *tests* directory. To run unit test, run the following command:
